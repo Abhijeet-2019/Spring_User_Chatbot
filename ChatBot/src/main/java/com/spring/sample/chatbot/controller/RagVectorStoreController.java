@@ -13,8 +13,10 @@ import org.springframework.web.bind.annotation.*;
 public class RagVectorStoreController {
 
 
-//    @PostMapping("/fetchDetailsFromRag")
-//    public PromptChatResponse chat(@RequestBody ChatRequest chatRequest, String conversationId) {
-//        return ragChatService.fetchDetailsFromRag(chatRequest, conversationId );
-//    }
+    private final RagChatService ragChatService;
+
+    @PostMapping("/fetchDetailsFromRag")
+    public PromptChatResponse chat(@RequestBody ChatRequest chatRequest, String conversationId) {
+        return ragChatService.fetchDetailsFromRag(chatRequest, conversationId );
+    }
 }
